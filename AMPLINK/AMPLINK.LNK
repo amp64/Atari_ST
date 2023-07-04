@@ -1,0 +1,4 @@
+FROM c.o+main.o+syms.o+input.o+output.o
+LIB lc.lib
+TO amplink.ttp
+XADDSYM

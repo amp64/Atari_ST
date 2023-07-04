@@ -1,0 +1,12 @@
+
+OBJECTS = syms.o main.o input.o output.o
+
+.SUFFIXES: .o .c
+
+.c.o:
+	lc -d2 -v -cf $<
+
+
+amplink.ttp: $(OBJECTS)
+	clink with amplink.lnk
+	tthead -lm amplink.ttp
